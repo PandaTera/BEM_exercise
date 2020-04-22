@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+   width: 100vw;
+   height: 20vh;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.top__text{
+    width: 100vw;
+    height:40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.top__img{
+    position: relative;
+    width: 100vw;
+    height:100vh; 
+}
+.top__title{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+.top__subtitle{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: dashed;
+}
+.top__btn{
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+    width: 150px;
+    height: 35px;
+    background-color: yellow;
+    border-style: none;
+    border-radius: 15px;
+    color: rgb(20, 19, 19);
+    font-size: medium;
+    font-weight: 700;
+    letter-spacing: 2px;
+    initial-letter: 2;
+}
+.navigation{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    left: 50px;
+    top: 94vh;
+}
+.navigation__logo{
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50% 10% 50% 10%;
+}
+.navigation__name{
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 80px;
+    font-weight: 600;
+}
+.navigation__menu-items{
+    display: inline-flex;
+    height: 35px;
+    line-height: 33px;
+    margin-left: 30%;
+    border-bottom: 2px solid black;
+}
+.navigation__item{
+    width: 140px;
+    text-align: center;
+    list-style: none;
+    font-weight: 600;
+    position: relative;
+}
+.navigation__item:hover{
+background-color: blue;
+}
+.second{
+    display: inline-block;
+    list-style: none;
+}
+.second__item{
+    float: left;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+}
+.navigation__item:hover > .second .second__item{
+    background-color: #000;
+    color: white;
+    display: block;
+}
+.navigation__item:hover > .second .second__item:hover{
+background-color: rgb(104, 105, 102);
+}
+
+.navigation__item:hover > .second.animate{
+    perspective: 1000px;
+}
+.navigation__item:hover > .second.animate .second__item{
+    transform-origin: top center;
+    opacity: 1;
+}
+.navigation__item:hover > .second.animate .second__item:nth-child(1){
+    animation-name: go;
+    animation-delay: -150ms;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+.navigation__item:hover > .second.animate .second__item:nth-child(2){
+    animation-name: go;
+    animation-delay: 0ms;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+.navigation__item:hover > .second.animate .second__item:nth-child(3){
+    animation-name: go;
+    animation-delay: 150ms;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+@keyframes go{
+    0%{
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    70%{
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.texts{
+    position: absolute;
+    left: 100px;
+    top: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    flex-wrap: nowrap;
+    padding: 15px 30px 15px 30px;
+    width: 87vw;
+    min-height: 70vh;
+    background-color: orange;
+    border-radius: 5px;
+    opacity: .9;
+    z-index: -1;
+}
+.texts__title{
+    flex-basis: 80%; 
+    margin: 20px 5vw 20px 70px;
+    display: flex;
+   }
+
+.texts__subtitle{
+    flex-basis: 40%;
+    margin: 0px 5vw 10px;
+    display: flex;
+    font-size: 1.2em;
+}
+
+.texts__content{
+    flex-basis: 40%;
+    margin: 0px 3vw 10px;
+}
+
+.texts__btn{
+    flex-basis: 10%;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: yellow;
+    border-style: none;
+    border-radius: 15px;
+    font-weight: 600;
+    align-content: flex-end;
+    right: 10vw;
+    bottom: 28px;
+    position: absolute;
+}
+.footer{
+    position: absolute;
+    flex-basis: 100%;
+    top: 200vh;
+    width: 100vw;
+    line-height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
